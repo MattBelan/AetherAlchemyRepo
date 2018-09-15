@@ -18,7 +18,7 @@ public class PotBehavior : MonoBehaviour {
 	void Start () {
 		potPos = transform.position;
 		potPos.y -= .35f;
-		direction = GameObject.Find ("FirstPersonCharacter").transform.forward;
+		direction = GameObject.Find ("MainCamera").transform.forward;
 		direction.Normalize ();
 		velocity = speed * direction;
 	}
