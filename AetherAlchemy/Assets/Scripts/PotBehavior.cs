@@ -36,6 +36,11 @@ public class PotBehavior : MonoBehaviour {
 
 		acceleration = Vector3.zero;
 		transform.position = potPos;
+
+        if (transform.position.y < 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 
 	void ApplyGravity(){

@@ -101,8 +101,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
-  speed: 8
-  gravity: {x: 0, y: -4, z: 0}
+  speed: 16
+  gravity: {x: 0, y: -8, z: 0}
 --- !u!135 &135598250751369158
 SphereCollider:
   m_ObjectHideFlags: 1
