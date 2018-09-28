@@ -9,6 +9,7 @@ public class PotBehavior : MonoBehaviour {
 	public Vector3 direction;
 	public Vector3 velocity;
 	public Vector3 acceleration;
+    public string type;
 
 	public float speed;
 	//
@@ -25,7 +26,9 @@ public class PotBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ApplyGravity ();
+
+        potPos = transform.position;
+        ApplyGravity ();
 
 
 		velocity += acceleration * Time.deltaTime;
@@ -37,8 +40,9 @@ public class PotBehavior : MonoBehaviour {
 		acceleration = Vector3.zero;
 		transform.position = potPos;
 
-        if (transform.position.y < 0)
+        if (transform.position.y < -40)
         {
+            GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(gameObject);
             Destroy(gameObject);
         }
 	}

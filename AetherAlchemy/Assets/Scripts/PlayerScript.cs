@@ -7,18 +7,27 @@ public class PlayerScript : MonoBehaviour {
 	public GameObject potion;
     private bool firstIng;
     private bool secondIng;
-    private bool potReady;
+    private string potReady;
+
+    //input and potion tracking
+    private List<string> inputs;
+    public List<GameObject> potList;
+
+    //manipulating player
+    public Vector3 pos;
+    public Vector3 direction;
+    public Vector3 velocity;
 
     // Use this for initialization
     void Start () {
         firstIng = false;
         secondIng = false;
-        potReady = false;
+        potReady = "";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        pos = transform.position;
 
         if (Input.GetKeyDown("1") && !firstIng)
         {
@@ -31,20 +40,43 @@ public class PlayerScript : MonoBehaviour {
 
         if(firstIng && secondIng)
         {
-            potReady = true;
+            potReady = "fire";
         }
 
-        if (Input.GetMouseButtonDown(0) && potReady)
+        if (Input.GetMouseButtonDown(0) && potReady == "fire")
         {
             ThrowPotion();
             firstIng = false;
             secondIng = false;
-            potReady = false;
+            potReady = "";
         }
+
+        Bounce();
+        pos += velocity * Time.deltaTime;
+        transform.position = pos;
     }
 
 	void ThrowPotion(){
-		Instantiate (potion, this.gameObject.transform);
+        potList.Add(Instantiate(potion, this.gameObject.transform));
 	
 	}
+
+    void Bounce()
+    {
+        GameObject bounceArea = GameObject.Find("bounceTest");
+
+        if (bounceArea != null)
+        {
+            if (bounceArea.GetComponent<Collider>().bounds.Intersects(this.GetComponent<Collider>().bounds))
+            {
+                velocity.y = 20;
+
+
+            }
+            else
+            {
+                velocity.y = velocity.y * .98f;
+            }
+        }
+    }
 }
