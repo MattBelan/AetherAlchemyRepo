@@ -50,14 +50,15 @@ public class PlayerScript : MonoBehaviour {
             secondIng = false;
             potReady = "";
         }
-
+        /*
         Bounce();
         pos += velocity * Time.deltaTime;
         transform.position = pos;
+        */
     }
 
 	void ThrowPotion(){
-        potList.Add(Instantiate(potion, this.gameObject.transform));
+        potList.Add(Instantiate(potion, transform.position, transform.rotation));
 	
 	}
 
