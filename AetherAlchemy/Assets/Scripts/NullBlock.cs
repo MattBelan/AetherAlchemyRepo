@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurnableScript : MonoBehaviour {
+public class NullBlock : MonoBehaviour {
 
     GameObject burnablePotion;
-    Collider burnCollider;
+    Collider nullCollider;
     Collider potCollider;
 
-	// Use this for initialization
-	void Start () {
-        burnCollider = GetComponentInChildren<Collider>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        burnCollider = gameObject.GetComponentInChildren<Collider>();
+    // Use this for initialization
+    void Start()
+    {
+        nullCollider = GetComponentInChildren<Collider>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        nullCollider = gameObject.GetComponentInChildren<Collider>();
         burnablePotion = GameObject.Find("PotionTest(Clone)");
         if (burnablePotion != null)
         {
@@ -25,9 +27,8 @@ public class BurnableScript : MonoBehaviour {
         {
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             Destroy(burnablePotion);
-            Destroy(gameObject);
         }
-	}
+    }
 
     bool CheckIntersection()
     {
@@ -35,12 +36,10 @@ public class BurnableScript : MonoBehaviour {
         {
             return false;
         }
-        if (burnCollider.bounds.Intersects(potCollider.bounds))
+        if (nullCollider.bounds.Intersects(potCollider.bounds))
         {
             return true;
         }
         return false;
     }
-
-
 }

@@ -58,8 +58,10 @@ public class PlayerScript : MonoBehaviour {
     }
 
 	void ThrowPotion(){
-        potList.Add(Instantiate(potion, transform.position, transform.rotation));
-	
+        if (potList.Count <1)
+        {
+            potList.Add(Instantiate(potion, transform.position + transform.right.normalized/4, transform.rotation));
+        }
 	}
 
     void Bounce()
