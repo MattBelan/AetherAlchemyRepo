@@ -7,6 +7,7 @@ public class BurnableScript : MonoBehaviour {
     GameObject burnablePotion;
     Collider burnCollider;
     Collider potCollider;
+    GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -15,18 +16,21 @@ public class BurnableScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        player = GameObject.Find("RigidBodyFPSController");
         burnCollider = gameObject.GetComponentInChildren<Collider>();
         burnablePotion = GameObject.Find("PotionTest(Clone)");
         if (burnablePotion != null)
         {
             potCollider = burnablePotion.GetComponent<Collider>();
         }
+        /*
         if (CheckIntersection())
         {
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             Destroy(burnablePotion);
             Destroy(gameObject);
         }
+        */
 	}
 
     bool CheckIntersection()
@@ -42,5 +46,14 @@ public class BurnableScript : MonoBehaviour {
         return false;
     }
 
+    void OnCollisionEnter(Collision pot)
+    {
+        if(burnablePotion == pot.gameObject)
+        {
+            GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
+            Destroy(burnablePotion);
+            Destroy(gameObject);
+        }
+    }
 
 }

@@ -23,11 +23,13 @@ public class NullBlock : MonoBehaviour {
         {
             potCollider = burnablePotion.GetComponent<Collider>();
         }
+        /*
         if (CheckIntersection())
         {
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             Destroy(burnablePotion);
         }
+        */
     }
 
     bool CheckIntersection()
@@ -41,5 +43,14 @@ public class NullBlock : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    void OnCollisionEnter(Collision pot)
+    {
+        if(burnablePotion == pot.gameObject)
+        {
+            GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
+            Destroy(burnablePotion);
+        }
     }
 }
