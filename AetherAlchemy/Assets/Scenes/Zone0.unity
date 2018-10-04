@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1779,15 +1779,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.9896107
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.49
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.26
+      value: 99.76
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9241,6 +9241,7 @@ GameObject:
   - component: {fileID: 1995954226}
   - component: {fileID: 1995954225}
   - component: {fileID: 1995954228}
+  - component: {fileID: 1995954229}
   m_Layer: 0
   m_Name: wall (15)
   m_TagString: Untagged
@@ -9326,6 +9327,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1995954229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995954223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877379e4ae5cf5b499a7b8f9ee9f4154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleNum: 4
 --- !u!1 &2014278368
 GameObject:
   m_ObjectHideFlags: 0
@@ -9338,6 +9351,7 @@ GameObject:
   - component: {fileID: 2014278371}
   - component: {fileID: 2014278370}
   - component: {fileID: 2014278373}
+  - component: {fileID: 2014278374}
   m_Layer: 0
   m_Name: wall (15)
   m_TagString: Untagged
@@ -9423,6 +9437,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2014278374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014278368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877379e4ae5cf5b499a7b8f9ee9f4154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleNum: 3
 --- !u!1 &2029221053
 GameObject:
   m_ObjectHideFlags: 0
