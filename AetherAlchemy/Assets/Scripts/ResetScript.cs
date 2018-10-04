@@ -5,7 +5,7 @@ using UnityEngine;
 public class ResetScript : MonoBehaviour {
 
     GameObject player;
-    public int puzzleNum;
+    [SerializeField] GameObject spawnPoint;
 
 	// Use this for initialization
 	void Start () {
@@ -21,19 +21,7 @@ public class ResetScript : MonoBehaviour {
     {
         if (player == other.gameObject)
         {
-            Vector3 newPos;
-
-            switch (puzzleNum)
-            {
-                case 3:
-                    newPos = new Vector3(-0.13f, 4.29f, 69.5f);
-                    player.transform.position = newPos;
-                    break;
-                case 4:
-                    newPos = new Vector3(-0.13f, 2.03f, 99.76f);
-                    player.transform.position = newPos;
-                    break;
-            }
+            player.transform.position = spawnPoint.transform.position;
         }
     }
 }
