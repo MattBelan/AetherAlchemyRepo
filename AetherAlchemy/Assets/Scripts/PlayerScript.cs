@@ -46,6 +46,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && potReady == "fire")
         {
             ThrowPotion();
+            GetComponent<AudioSource>().Play();
             firstIng = false;
             secondIng = false;
             potReady = "";

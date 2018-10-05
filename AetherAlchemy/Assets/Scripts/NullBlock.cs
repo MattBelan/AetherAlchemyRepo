@@ -49,6 +49,7 @@ public class NullBlock : MonoBehaviour {
     {
         if(burnablePotion == pot.gameObject)
         {
+            GameObject.Find("ShatterSound").GetComponent<AudioSource>().Play();
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             Destroy(burnablePotion);
         }

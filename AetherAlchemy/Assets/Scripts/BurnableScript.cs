@@ -8,10 +8,13 @@ public class BurnableScript : MonoBehaviour {
     Collider burnCollider;
     Collider potCollider;
     GameObject player;
+   
+    AudioSource burn;
 
 	// Use this for initialization
 	void Start () {
         burnCollider = GetComponentInChildren<Collider>();
+        burn = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -50,6 +53,8 @@ public class BurnableScript : MonoBehaviour {
     {
         if(burnablePotion == pot.gameObject)
         {
+            GameObject.Find("BurnSound").GetComponent<AudioSource>().Play();
+            GameObject.Find("ShatterSound").GetComponent<AudioSource>().Play();
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             Destroy(burnablePotion);
             Destroy(gameObject);
