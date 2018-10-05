@@ -8,7 +8,6 @@ public class Pause : MonoBehaviour
     void Start()
     {
         pausePanel.SetActive(false);
-				Debug.Log("Hello world");
     }
     void Update()
     {
