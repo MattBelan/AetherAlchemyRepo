@@ -224,6 +224,6 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
-  type: 
+  type: fire
   speed: 24
   gravity: {x: 0, y: -24, z: 0}

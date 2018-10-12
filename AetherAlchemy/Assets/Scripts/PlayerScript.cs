@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 	//player references and variables
-	public GameObject potion;
-    private bool firstIng;
-    private bool secondIng;
+	public GameObject firePotion;
+    public GameObject bouncePotion;
+    public GameObject pushPotion;
     private string potReady;
 
     //input and potion tracking
@@ -20,36 +20,122 @@ public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        firstIng = false;
-        secondIng = false;
         potReady = "";
+        inputs = new List<string>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         pos = transform.position;
 
-        if (Input.GetKeyDown("1") && !firstIng)
+        //getting potion inputs
+        if (Input.GetKeyDown("1") && inputs.Count<2)
         {
-            firstIng = true;
+            if(inputs.Count < 2)
+            {
+                inputs.Add("1");
+            }
+            else
+            {
+                inputs.Clear();
+                inputs.Add("1");
+            }
         }
-        if (Input.GetKeyDown("2") && !secondIng)
+        if (Input.GetKeyDown("2") && inputs.Count < 2)
         {
-            secondIng = true;
+            if (inputs.Count < 2)
+            {
+                inputs.Add("2");
+            }
+            else
+            {
+                inputs.Clear();
+                inputs.Add("2");
+            }
+        }
+        if (Input.GetKeyDown("3") && inputs.Count < 2)
+        {
+            if (inputs.Count < 2)
+            {
+                inputs.Add("3");
+            }
+            else
+            {
+                inputs.Clear();
+                inputs.Add("3");
+            }
         }
 
-        if(firstIng && secondIng)
+        //checking if potion is ready
+        if (inputs.Count >= 2)
         {
-            potReady = "fire";
+            switch (inputs[0])  //First ingredient
+            {
+                case "1":
+                    switch (inputs[1])  //Second Ingredient
+                    {
+                        case "1":       //Base with base = nothing
+                            inputs.Clear();
+                            break;
+                        case "2":       //base with red(2) = fire
+                            inputs.Clear();
+                            potReady = "fire";
+                            break;
+                        case "3":       //base with blue/green(3) = bounce
+                            inputs.Clear();
+                            potReady = "bounce";
+                            break;
+                    }
+                    break;
+                case "2":
+                    switch (inputs[1])
+                    {
+                        case "1":       //fire + base
+                            inputs.Clear();
+                            potReady = "fire";
+                            break;
+                        case "2":       //fire+fire = nothing
+                            inputs.Clear();
+                            break;
+                        case "3":       //fire + bounce = push
+                            inputs.Clear();
+                            potReady = "push";
+                            break;
+                    }
+                    break;
+                case "3":
+                    switch (inputs[1])
+                    {
+                        case "1":       //bounce+ base
+                            inputs.Clear();
+                            potReady = "bounce";
+                            break;
+                        case "2":       //bounce + fire
+                            inputs.Clear();
+                            potReady = "push";
+                            break;
+                        case "3":       //bounce + bounce = nothing
+                            inputs.Clear();
+                            break;
+                    }
+                    break;
+            }
         }
 
-        if (Input.GetMouseButtonDown(0) && potReady == "fire")
+        if (Input.GetMouseButtonDown(0))
         {
-            ThrowPotion();
-            GetComponent<AudioSource>().Play();
-            firstIng = false;
-            secondIng = false;
-            potReady = "";
+            switch (potReady)
+            {
+                case "fire":
+                    ThrowPotion();
+                    GetComponent<AudioSource>().Play();
+                    potReady = "";
+                    break;
+                case "bounce":
+                    break;
+                case "push":
+                    break;
+            }
         }
         /*
         Bounce();
@@ -61,7 +147,7 @@ public class PlayerScript : MonoBehaviour {
 	void ThrowPotion(){
         if (potList.Count <1)
         {
-            potList.Add(Instantiate(potion, transform.position + transform.right.normalized/4, transform.rotation));
+            potList.Add(Instantiate(firePotion, transform.position + transform.right.normalized/4 + transform.up/2, transform.rotation));
         }
 	}
 

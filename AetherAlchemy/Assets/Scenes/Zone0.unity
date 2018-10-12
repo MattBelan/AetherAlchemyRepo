@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1772,6 +1772,7 @@ GameObject:
   - component: {fileID: 135814182}
   - component: {fileID: 135814181}
   - component: {fileID: 135814180}
+  - component: {fileID: 135814183}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (5)
   m_TagString: Untagged
@@ -1852,6 +1853,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 135814178}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &135814183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135814178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &137615136
 Prefab:
   m_ObjectHideFlags: 0
@@ -1910,6 +1922,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b282bb7af77994f87537a877585083, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &138476370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 275072410}
+--- !u!114 &138476375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138476370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &140024967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a6456b9419960c543890384b83ae02ef,
@@ -2495,6 +2523,22 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153406569}
   m_CullTransparentMesh: 0
+--- !u!1 &158261513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 325925368}
+--- !u!114 &158261514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 158261513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &163366159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2681,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &191517725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 325925368}
+--- !u!114 &191517730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 191517725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &191697039
 Prefab:
   m_ObjectHideFlags: 0
@@ -6179,6 +6239,7 @@ GameObject:
   - component: {fileID: 468782086}
   - component: {fileID: 468782085}
   - component: {fileID: 468782084}
+  - component: {fileID: 468782087}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (1)
   m_TagString: Untagged
@@ -6259,6 +6320,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 468782082}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &468782087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468782082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &472830416
 Prefab:
   m_ObjectHideFlags: 0
@@ -6927,6 +6999,7 @@ GameObject:
   - component: {fileID: 527936340}
   - component: {fileID: 527936339}
   - component: {fileID: 527936338}
+  - component: {fileID: 527936341}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (4)
   m_TagString: Untagged
@@ -7007,6 +7080,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527936336}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &527936341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527936336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &533237692
 Prefab:
   m_ObjectHideFlags: 0
@@ -7575,6 +7659,7 @@ GameObject:
   - component: {fileID: 557227449}
   - component: {fileID: 557227448}
   - component: {fileID: 557227447}
+  - component: {fileID: 557227450}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (1)
   m_TagString: Untagged
@@ -7655,6 +7740,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 557227445}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &557227450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557227445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &557870732
 GameObject:
   m_ObjectHideFlags: 0
@@ -7848,7 +7944,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b770a0ed24cdf469fa95a45d96869e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potion: {fileID: 1864777152889532, guid: 6a6fd186128ad3b4c8fdffe3fa77f5a4, type: 2}
+  firePotion: {fileID: 1864777152889532, guid: 6a6fd186128ad3b4c8fdffe3fa77f5a4, type: 2}
+  bouncePotion: {fileID: 0}
+  pushPotion: {fileID: 0}
   potList: []
   pos: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
@@ -11852,6 +11950,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: d0b282bb7af77994f87537a877585083,
     type: 3}
   m_PrefabInternal: {fileID: 2021576263}
+--- !u!1 &918143853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 1750066927}
+--- !u!114 &918143858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918143853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &924244437
 GameObject:
   m_ObjectHideFlags: 0
@@ -13043,6 +13157,7 @@ GameObject:
   - component: {fileID: 1026555985}
   - component: {fileID: 1026555984}
   - component: {fileID: 1026555983}
+  - component: {fileID: 1026555986}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (1)
   m_TagString: Untagged
@@ -13123,6 +13238,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1026555981}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &1026555986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1026555981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1028355781
 GameObject:
   m_ObjectHideFlags: 0
@@ -14713,6 +14839,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b282bb7af77994f87537a877585083, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1120667977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 1596202288}
+--- !u!114 &1120667982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1120667977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1122613590
 GameObject:
   m_ObjectHideFlags: 0
@@ -21012,6 +21154,7 @@ GameObject:
   - component: {fileID: 1628432410}
   - component: {fileID: 1628432409}
   - component: {fileID: 1628432408}
+  - component: {fileID: 1628432411}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (3)
   m_TagString: Untagged
@@ -21092,6 +21235,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628432406}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &1628432411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1628432406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631466151
 GameObject:
   m_ObjectHideFlags: 0
@@ -28714,6 +28868,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: d0b282bb7af77994f87537a877585083,
     type: 3}
   m_PrefabInternal: {fileID: 1812762395}
+--- !u!1001 &1817290947
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -16.638584
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.341721
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.798645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116652964579230, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667489959898066, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+      propertyPath: m_Name
+      value: Sphere
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ee87ae50db86f543a6f58b2027af98e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1840500305
 GameObject:
   m_ObjectHideFlags: 0
@@ -28726,6 +28926,7 @@ GameObject:
   - component: {fileID: 1840500309}
   - component: {fileID: 1840500308}
   - component: {fileID: 1840500307}
+  - component: {fileID: 1840500310}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (1)
   m_TagString: Untagged
@@ -28806,11 +29007,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840500305}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &1840500310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840500305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1840957734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 6b2dcd3a99834b74783a27bb6c808027,
     type: 3}
   m_PrefabInternal: {fileID: 662241041}
+--- !u!1 &1846587793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 49d82b08dddf80047a79b37b29510693,
+    type: 3}
+  m_PrefabInternal: {fileID: 1053907652}
+--- !u!114 &1846587798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846587793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1849780667
 GameObject:
   m_ObjectHideFlags: 0
@@ -30401,6 +30629,7 @@ GameObject:
   - component: {fileID: 1954530559}
   - component: {fileID: 1954530558}
   - component: {fileID: 1954530557}
+  - component: {fileID: 1954530560}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (1)
   m_TagString: Untagged
@@ -30481,6 +30710,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1954530555}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &1954530560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954530555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1955299797
 Prefab:
   m_ObjectHideFlags: 0
@@ -30932,6 +31172,7 @@ GameObject:
   - component: {fileID: 2005122007}
   - component: {fileID: 2005122006}
   - component: {fileID: 2005122005}
+  - component: {fileID: 2005122008}
   m_Layer: 0
   m_Name: Rock_Large_Flat_Dirt_01 1 (2)
   m_TagString: Untagged
@@ -31012,6 +31253,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005122003}
   m_Mesh: {fileID: 4300002, guid: 49d82b08dddf80047a79b37b29510693, type: 3}
+--- !u!114 &2005122008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005122003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2005542411
 Prefab:
   m_ObjectHideFlags: 0
@@ -32350,6 +32602,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b282bb7af77994f87537a877585083, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &2096241961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 18d9e12d42131514b88d9b8614d57fc7,
+    type: 3}
+  m_PrefabInternal: {fileID: 145436603}
+--- !u!114 &2096241962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096241961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105471042
 GameObject:
   m_ObjectHideFlags: 0
