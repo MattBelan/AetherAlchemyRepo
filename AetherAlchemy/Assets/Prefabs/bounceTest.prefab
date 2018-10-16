@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65169452502759420}
   m_Layer: 0
   m_Name: bounceTest
-  m_TagString: Untagged
+  m_TagString: bounceArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476402422766944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.21, z: 0}
-  m_LocalScale: {x: 4, y: 0.05, z: 4}
+  m_LocalPosition: {x: -28.377775, y: -10.947286, z: 149.37836}
+  m_LocalScale: {x: 8.9964, y: 0.052714407, z: 8.9964}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,8 +91,8 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476402422766944}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 1.0000001, y: 11.235594, z: 1.0000002}
+  m_Center: {x: 0.00000005300311, y: 4.6177955, z: -0.00000010600622}

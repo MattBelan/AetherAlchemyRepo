@@ -27,28 +27,7 @@ public class BurnableScript : MonoBehaviour {
         {
             potCollider = burnablePotion.GetComponent<Collider>();
         }
-        /*
-        if (CheckIntersection())
-        {
-            GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
-            Destroy(burnablePotion);
-            Destroy(gameObject);
-        }
-        */
 	}
-
-    bool CheckIntersection()
-    {
-        if (burnablePotion == null)
-        {
-            return false;
-        }
-        if (burnCollider.bounds.Intersects(potCollider.bounds))
-        {
-            return true;
-        }
-        return false;
-    }
 
     void OnCollisionEnter(Collision pot)
     {
@@ -59,7 +38,7 @@ public class BurnableScript : MonoBehaviour {
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
             //GameObject.Find("Fire").GetComponent<ParticleSystem>().Play();
             Destroy(burnablePotion);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

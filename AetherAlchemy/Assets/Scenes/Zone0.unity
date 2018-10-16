@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4533,7 +4533,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30.38
+      value: 135.9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4562,6 +4562,14 @@ Prefab:
     - target: {fileID: 8100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13600000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
@@ -7945,7 +7953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePotion: {fileID: 1864777152889532, guid: 6a6fd186128ad3b4c8fdffe3fa77f5a4, type: 2}
-  bouncePotion: {fileID: 0}
+  bouncePotion: {fileID: 1667489959898066, guid: 8ee87ae50db86f543a6f58b2027af98e,
+    type: 2}
   pushPotion: {fileID: 0}
   potList: []
   pos: {x: 0, y: 0, z: 0}
@@ -17318,6 +17327,7 @@ GameObject:
   - component: {fileID: 1288386018}
   - component: {fileID: 1288386017}
   - component: {fileID: 1288386021}
+  - component: {fileID: 1288386022}
   m_Layer: 0
   m_Name: wall (20)
   m_TagString: Untagged
@@ -17403,6 +17413,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1288386022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1288386016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7140cc82b7cdc3498b5dd9f0d725d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceEffect: {fileID: 1476402422766944, guid: e14d9d99c3add7f499194ae503e654f5,
+    type: 2}
 --- !u!1001 &1290608240
 Prefab:
   m_ObjectHideFlags: 0

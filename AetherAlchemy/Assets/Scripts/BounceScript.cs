@@ -19,7 +19,7 @@ public class BounceScript : MonoBehaviour {
     void Update()
     {
         bounceCollider = gameObject.GetComponent<Collider>();
-        bouncePotion = GameObject.Find("PotionTest(Clone)");
+        bouncePotion = GameObject.Find("bouncePotion(Clone)");
         if (bouncePotion != null)
         {
             potCollider = bouncePotion.GetComponent<Collider>();
@@ -29,7 +29,7 @@ public class BounceScript : MonoBehaviour {
             GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(bouncePotion);
             if (GameObject.Find("bounceTest(Clone)") == null)
             {
-                Instantiate(bounceEffect);
+                Instantiate(bounceEffect, bouncePotion.transform.position+bouncePotion.transform.up/10, bouncePotion.transform.rotation);
             }
             GameObject.Find("bounceTest(Clone)").transform.position = bouncePotion.transform.position;
             Destroy(bouncePotion);

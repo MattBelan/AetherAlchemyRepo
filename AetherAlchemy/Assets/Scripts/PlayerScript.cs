@@ -17,11 +17,15 @@ public class PlayerScript : MonoBehaviour {
     public Vector3 pos;
     public Vector3 direction;
     public Vector3 velocity;
+    Rigidbody playerRigid;
+    bool onBounce;
 
     // Use this for initialization
     void Start () {
         potReady = "";
         inputs = new List<string>();
+        playerRigid = GetComponent<Rigidbody>();
+        onBounce = false;
 	}
 	
 	// Update is called once per frame
@@ -127,46 +131,65 @@ public class PlayerScript : MonoBehaviour {
             switch (potReady)
             {
                 case "fire":
-                    ThrowPotion();
+                    ThrowFire();
                     GetComponent<AudioSource>().Play();
                     potReady = "";
                     break;
                 case "bounce":
+                    ThrowBounce();
+                    GetComponent<AudioSource>().Play();
+                    potReady = "";
                     break;
                 case "push":
                     break;
             }
         }
-        /*
-        Bounce();
-        pos += velocity * Time.deltaTime;
-        transform.position = pos;
-        */
+
+
+        if (Input.GetKeyDown("space") && onBounce)
+        {
+            Vector3 newVelocity = playerRigid.velocity;
+            newVelocity.y = 100.0f;
+
+            playerRigid.velocity = newVelocity;
+        }
     }
 
-	void ThrowPotion(){
+	void ThrowFire(){
         if (potList.Count <1)
         {
             potList.Add(Instantiate(firePotion, transform.position + transform.right.normalized/4 + transform.up/2, transform.rotation));
         }
 	}
 
-    void Bounce()
+    void ThrowBounce()
     {
-        GameObject bounceArea = GameObject.Find("bounceTest");
-
-        if (bounceArea != null)
+        if (potList.Count < 1)
         {
-            if (bounceArea.GetComponent<Collider>().bounds.Intersects(this.GetComponent<Collider>().bounds))
-            {
-                velocity.y = 20;
+            potList.Add(Instantiate(bouncePotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
+        }
+    }
 
-
-            }
-            else
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "bounceArea")
+        {
+            onBounce = true;
+            if (playerRigid.velocity.y < -3)
             {
-                velocity.y = velocity.y * .98f;
+                Vector3 newVelocity = playerRigid.velocity;
+                newVelocity.y = -newVelocity.y;
+
+                playerRigid.velocity = newVelocity;
             }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "bounceArea")
+        {
+            onBounce = false;
         }
     }
 }
