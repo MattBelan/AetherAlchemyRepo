@@ -5,10 +5,8 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
-    void Start()
-    {
-        pausePanel.SetActive(false);
-    }
+    [SerializeField] private GameObject quitWarning;
+
     void Update()
     {
         if(Input.GetKeyDown (KeyCode.Escape))
@@ -19,7 +17,10 @@ public class Pause : MonoBehaviour
             }
             else if (pausePanel.activeInHierarchy)
             {
-                 ContinueGame();
+                if(quitWarning.activeInHierarchy){
+                  quitWarning.SetActive(false);
+                }
+                ContinueGame();
             }
         }
      }
