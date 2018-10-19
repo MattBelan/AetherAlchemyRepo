@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3413,7 +3413,7 @@ GameObject:
   - component: {fileID: 217507739}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3437,7 +3437,7 @@ BoxCollider:
   m_GameObject: {fileID: 217507738}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4571,6 +4571,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
   m_IsPrefabAsset: 0
@@ -5654,7 +5658,7 @@ GameObject:
   - component: {fileID: 426153450}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5678,7 +5682,7 @@ BoxCollider:
   m_GameObject: {fileID: 426153449}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -7955,8 +7959,9 @@ MonoBehaviour:
   firePotion: {fileID: 1864777152889532, guid: 6a6fd186128ad3b4c8fdffe3fa77f5a4, type: 2}
   bouncePotion: {fileID: 1667489959898066, guid: 8ee87ae50db86f543a6f58b2027af98e,
     type: 2}
-  pushPotion: {fileID: 0}
+  pushPotion: {fileID: 1024563018253028, guid: b9be83694a42979439ce8faf3ce624db, type: 2}
   potList: []
+  effectList: []
   pos: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -9020,7 +9025,7 @@ GameObject:
   - component: {fileID: 692239031}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16135,7 +16140,7 @@ GameObject:
   - component: {fileID: 1199645901}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17432,10 +17437,9 @@ GameObject:
   - component: {fileID: 1288386018}
   - component: {fileID: 1288386017}
   - component: {fileID: 1288386021}
-  - component: {fileID: 1288386022}
   m_Layer: 0
   m_Name: wall (20)
-  m_TagString: Untagged
+  m_TagString: RoomObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17501,8 +17505,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1288386016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 0, y: -0.07, z: 0}
+  m_LocalScale: {x: 100, y: -1.0759866, z: 100}
   m_Children: []
   m_Father: {fileID: 1857543019}
   m_RootOrder: 2
@@ -17518,19 +17522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a81df2e56da0d44a7ae3b3efabd651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1288386022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1288386016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7140cc82b7cdc3498b5dd9f0d725d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceEffect: {fileID: 1476402422766944, guid: e14d9d99c3add7f499194ae503e654f5,
-    type: 2}
 --- !u!1001 &1290608240
 Prefab:
   m_ObjectHideFlags: 0
@@ -18815,7 +18806,7 @@ GameObject:
   - component: {fileID: 1393445906}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18839,7 +18830,7 @@ BoxCollider:
   m_GameObject: {fileID: 1393445905}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -18941,7 +18932,7 @@ GameObject:
   - component: {fileID: 1395385985}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18965,7 +18956,7 @@ BoxCollider:
   m_GameObject: {fileID: 1395385984}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -23152,7 +23143,7 @@ GameObject:
   - component: {fileID: 1750730279}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23176,7 +23167,7 @@ BoxCollider:
   m_GameObject: {fileID: 1750730278}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -24790,7 +24781,7 @@ GameObject:
   - component: {fileID: 1861725878}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24814,7 +24805,7 @@ BoxCollider:
   m_GameObject: {fileID: 1861725877}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

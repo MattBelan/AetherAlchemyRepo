@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
     //input and potion tracking
     private List<string> inputs;
     public List<GameObject> potList;
+    public List<GameObject> effectList;
 
     //manipulating player
     public Vector3 pos;
@@ -32,10 +33,62 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
         pos = transform.position;
 
-        //getting potion inputs
-        if (Input.GetKeyDown("1") && inputs.Count<2)
+        ProcessInput();
+        LimitEffects();
+    }
+
+	void ThrowFire(){
+        if (potList.Count <1)
         {
-            if(inputs.Count < 2)
+            potList.Add(Instantiate(firePotion, transform.position + transform.right.normalized/4 + transform.up/2, transform.rotation));
+        }
+	}
+
+    void ThrowBounce()
+    {
+        if (potList.Count < 1)
+        {
+            potList.Add(Instantiate(bouncePotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
+        }
+    }
+
+    void ThrowPush()
+    {
+        if (potList.Count < 1)
+        {
+            potList.Add(Instantiate(pushPotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "bounceArea")
+        {
+            onBounce = true;
+            if (playerRigid.velocity.y < -3)
+            {
+                Vector3 newVelocity = playerRigid.velocity;
+                newVelocity.y = -newVelocity.y;
+
+                playerRigid.velocity = newVelocity;
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "bounceArea")
+        {
+            onBounce = false;
+        }
+    }
+
+    void ProcessInput()
+    {
+        //getting potion inputs
+        if (Input.GetKeyDown("1") && inputs.Count < 2)
+        {
+            if (inputs.Count < 2)
             {
                 inputs.Add("1");
             }
@@ -128,68 +181,39 @@ public class PlayerScript : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            switch (potReady)
+            if(potReady != "")
             {
-                case "fire":
-                    ThrowFire();
-                    GetComponent<AudioSource>().Play();
-                    potReady = "";
-                    break;
-                case "bounce":
-                    ThrowBounce();
-                    GetComponent<AudioSource>().Play();
-                    potReady = "";
-                    break;
-                case "push":
-                    break;
+                switch (potReady)
+                {
+                    case "fire":
+                        ThrowFire();
+                        break;
+                    case "bounce":
+                        ThrowBounce();
+                        break;
+                    case "push":
+                        ThrowPush();
+                        break;
+                }
+                GetComponent<AudioSource>().Play();
+                potReady = "";
             }
         }
 
 
         if (Input.GetKeyDown("space") && onBounce)
         {
-            Vector3 newVelocity = playerRigid.velocity;
-            newVelocity.y = 100.0f;
-
-            playerRigid.velocity = newVelocity;
+            playerRigid.AddForce(0, 30.0f, 0, ForceMode.Impulse);
         }
     }
 
-	void ThrowFire(){
-        if (potList.Count <1)
-        {
-            potList.Add(Instantiate(firePotion, transform.position + transform.right.normalized/4 + transform.up/2, transform.rotation));
-        }
-	}
-
-    void ThrowBounce()
+    void LimitEffects()
     {
-        if (potList.Count < 1)
+        if (effectList.Count > 2)
         {
-            potList.Add(Instantiate(bouncePotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "bounceArea")
-        {
-            onBounce = true;
-            if (playerRigid.velocity.y < -3)
-            {
-                Vector3 newVelocity = playerRigid.velocity;
-                newVelocity.y = -newVelocity.y;
-
-                playerRigid.velocity = newVelocity;
-            }
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.tag == "bounceArea")
-        {
-            onBounce = false;
+            GameObject effect = effectList[0];
+            effectList.Remove(effectList[0]);
+            Destroy(effect);
         }
     }
 }
