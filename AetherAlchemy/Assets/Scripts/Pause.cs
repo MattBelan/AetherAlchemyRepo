@@ -6,10 +6,7 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject quitWarning;
-    void Start()
-    {
-        pausePanel.SetActive(false);
-    }
+
     void Update()
     {
         if(Input.GetKeyDown (KeyCode.Escape))
@@ -20,7 +17,9 @@ public class Pause : MonoBehaviour
             }
             else if (pausePanel.activeInHierarchy)
             {
-                quitWarning.SetActive(false);
+                if(quitWarning.activeInHierarchy){
+                  quitWarning.SetActive(false);
+                }
                 ContinueGame();
             }
         }
