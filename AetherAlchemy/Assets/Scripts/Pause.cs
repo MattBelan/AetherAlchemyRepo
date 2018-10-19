@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject quitWarning;
     void Start()
     {
         pausePanel.SetActive(false);
@@ -19,7 +20,8 @@ public class Pause : MonoBehaviour
             }
             else if (pausePanel.activeInHierarchy)
             {
-                 ContinueGame();
+                quitWarning.SetActive(false);
+                ContinueGame();
             }
         }
      }
