@@ -9230,7 +9230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 5707673}
-  quitWarning: {fileID: 0}
+  quitWarning: {fileID: 1992807721}
 --- !u!114 &578406373
 MonoBehaviour:
   m_ObjectHideFlags: 0
