@@ -5,6 +5,7 @@ using UnityEngine;
 public class PushEffect : MonoBehaviour {
 
     float timer;
+    public float pushScalar;
 	// Use this for initialization
 	void Start () {
         timer = 1.0f;
@@ -29,8 +30,12 @@ public class PushEffect : MonoBehaviour {
             pushForce.y = other.gameObject.transform.position.y - transform.position.y;
             pushForce.z = other.gameObject.transform.position.z - transform.position.z;
 
-            Debug.Log(pushForce);
-            other.gameObject.GetComponent<Rigidbody>().AddForce(pushForce*10, ForceMode.Impulse);
+            float magnitude = Vector3.Magnitude(pushForce);
+
+            pushForce.Normalize();
+            pushForce = pushForce * pushScalar / magnitude;
+            
+            other.gameObject.GetComponent<Rigidbody>().AddForce(pushForce, ForceMode.Impulse);
         }
     }
 }

@@ -201,7 +201,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown("space") && onBounce)
+        if (Input.GetKeyDown("space") && onBounce && playerRigid.velocity.y == 0)
         {
             playerRigid.AddForce(0, 30.0f, 0, ForceMode.Impulse);
         }
