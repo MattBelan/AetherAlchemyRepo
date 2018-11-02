@@ -6,16 +6,17 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject quitWarning;
+    static bool isPaused = false;
 
     void Update()
     {
         if(Input.GetKeyDown (KeyCode.Escape))
         {
-            if (!pausePanel.activeInHierarchy)
+            if (!isPaused)
             {
                 PauseGame();
             }
-            else if (pausePanel.activeInHierarchy)
+            else if (isPaused)
             {
                 if(quitWarning.activeInHierarchy){
                   quitWarning.SetActive(false);
@@ -26,6 +27,7 @@ public class Pause : MonoBehaviour
      }
     public void PauseGame()
     {
+        isPaused = true;
 				pausePanel.SetActive(true);
         Time.timeScale = 0;
 
@@ -33,6 +35,7 @@ public class Pause : MonoBehaviour
     }
     public void ContinueGame()
     {
+        isPaused = false;
 				pausePanel.SetActive(false);
 				Time.timeScale = 1;
 

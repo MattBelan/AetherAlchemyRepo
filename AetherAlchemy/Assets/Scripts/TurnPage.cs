@@ -11,4 +11,12 @@ public class TurnPage : MonoBehaviour {
 		currentPage.SetActive(false);
 		nextPage.SetActive(true);
 	}
+
+	public void SubMenuTurnForward() {
+		nextPage.SetActive(true);
+	}
+
+	public void SubMenuTurnBackward() {
+		currentPage.SetActive(false);
+	}
 }

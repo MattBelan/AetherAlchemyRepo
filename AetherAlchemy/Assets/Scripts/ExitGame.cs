@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class ExitGame : MonoBehaviour {
 
@@ -27,5 +28,6 @@ public class ExitGame : MonoBehaviour {
 
 	void QuitGame(){
 		Application.Quit();
+		EditorApplication.isPlaying = false;
 	}
 }
