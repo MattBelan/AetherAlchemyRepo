@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject quitWarning;
+    [SerializeField] private GameObject backgroundMusic;
     static bool isPaused = false;
 
     void Update()
@@ -28,6 +29,7 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
         isPaused = true;
+        backgroundMusic.GetComponent<AudioSource>().Pause();
 				pausePanel.SetActive(true);
         Time.timeScale = 0;
 
@@ -36,6 +38,7 @@ public class Pause : MonoBehaviour
     public void ContinueGame()
     {
         isPaused = false;
+        backgroundMusic.GetComponent<AudioSource>().UnPause();
 				pausePanel.SetActive(false);
 				Time.timeScale = 1;
 
