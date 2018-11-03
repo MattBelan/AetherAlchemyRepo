@@ -35,12 +35,13 @@ public class PushEffect : MonoBehaviour {
             pushForce.Normalize();
             pushForce = pushForce * pushScalar / magnitude;
 
-            if(other.gameObject.tag == "Player")
-            {
-                other.gameObject.GetComponent<Rigidbody>().AddForce(other.gameObject.transform.up * 10);
-            }
-            
-            other.gameObject.GetComponent<Rigidbody>().AddForce(pushForce, ForceMode.Impulse);
+			if (other.gameObject.tag == "Player") {
+				other.gameObject.GetComponent<Rigidbody> ().velocity = pushForce/5;
+			} 
+			else 
+			{
+				other.gameObject.GetComponent<Rigidbody>().AddForce(pushForce, ForceMode.Impulse);
+			}
         }
     }
 }
