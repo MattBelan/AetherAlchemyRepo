@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,8 +315,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 14636377}
-  - component: {fileID: 14636379}
   - component: {fileID: 14636378}
+  - component: {fileID: 14636379}
   m_Layer: 0
   m_Name: Box (28)
   m_TagString: Movable
@@ -1973,7 +1973,6 @@ GameObject:
   - component: {fileID: 217507745}
   - component: {fileID: 217507744}
   - component: {fileID: 217507743}
-  - component: {fileID: 217507742}
   - component: {fileID: 217507741}
   - component: {fileID: 217507740}
   - component: {fileID: 217507739}
@@ -2022,18 +2021,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &217507742
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 217507738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &217507743
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2872,11 +2859,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -142.6
+      value: -51.9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -12.97
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3111,7 +3098,7 @@ GameObject:
   - component: {fileID: 355702219}
   m_Layer: 0
   m_Name: Box (21)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3659,7 +3646,7 @@ GameObject:
   - component: {fileID: 401804480}
   m_Layer: 0
   m_Name: Box (10)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3853,7 +3840,7 @@ GameObject:
   - component: {fileID: 423559791}
   m_Layer: 0
   m_Name: Box (12)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3946,7 +3933,6 @@ GameObject:
   - component: {fileID: 426153456}
   - component: {fileID: 426153455}
   - component: {fileID: 426153454}
-  - component: {fileID: 426153453}
   - component: {fileID: 426153452}
   - component: {fileID: 426153451}
   - component: {fileID: 426153450}
@@ -3995,18 +3981,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &426153453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 426153449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &426153454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4405,7 +4379,7 @@ GameObject:
   - component: {fileID: 471353015}
   m_Layer: 0
   m_Name: Box (11)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4711,7 +4685,7 @@ GameObject:
   - component: {fileID: 495748875}
   m_Layer: 0
   m_Name: Box (25)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5774,7 +5748,7 @@ GameObject:
   - component: {fileID: 626492583}
   m_Layer: 0
   m_Name: Box (19)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5871,7 +5845,7 @@ GameObject:
   - component: {fileID: 630827737}
   m_Layer: 0
   m_Name: Box (16)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7706,7 +7680,7 @@ GameObject:
   - component: {fileID: 926570031}
   m_Layer: 0
   m_Name: Box (17)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7979,7 +7953,7 @@ GameObject:
   - component: {fileID: 952140997}
   m_Layer: 0
   m_Name: Box (1)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8370,7 +8344,7 @@ GameObject:
   - component: {fileID: 966120190}
   m_Layer: 0
   m_Name: Box (7)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8758,7 +8732,7 @@ GameObject:
   - component: {fileID: 1014128751}
   m_Layer: 0
   m_Name: Box (15)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9049,7 +9023,7 @@ GameObject:
   - component: {fileID: 1043202558}
   m_Layer: 0
   m_Name: Box (18)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9213,7 +9187,7 @@ GameObject:
   - component: {fileID: 1076771096}
   m_Layer: 0
   m_Name: Box (13)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11460,7 +11434,7 @@ GameObject:
   - component: {fileID: 1329023668}
   m_Layer: 0
   m_Name: Box (2)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11557,7 +11531,7 @@ GameObject:
   - component: {fileID: 1351263500}
   m_Layer: 0
   m_Name: Box (4)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12187,7 +12161,6 @@ GameObject:
   - component: {fileID: 1393445912}
   - component: {fileID: 1393445911}
   - component: {fileID: 1393445910}
-  - component: {fileID: 1393445909}
   - component: {fileID: 1393445908}
   - component: {fileID: 1393445907}
   - component: {fileID: 1393445906}
@@ -12236,18 +12209,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1393445909
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1393445905}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1393445910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12313,7 +12274,6 @@ GameObject:
   - component: {fileID: 1395385991}
   - component: {fileID: 1395385990}
   - component: {fileID: 1395385989}
-  - component: {fileID: 1395385988}
   - component: {fileID: 1395385987}
   - component: {fileID: 1395385986}
   - component: {fileID: 1395385985}
@@ -12362,18 +12322,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1395385988
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1395385984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1395385989
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12844,7 +12792,7 @@ GameObject:
   - component: {fileID: 1490591714}
   m_Layer: 0
   m_Name: Box (8)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12941,7 +12889,7 @@ GameObject:
   - component: {fileID: 1502351005}
   m_Layer: 0
   m_Name: Box (27)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13259,7 +13207,7 @@ GameObject:
   - component: {fileID: 1589794522}
   m_Layer: 0
   m_Name: Box (23)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14472,7 +14420,7 @@ GameObject:
   - component: {fileID: 1728275575}
   m_Layer: 0
   m_Name: Box (24)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14666,7 +14614,7 @@ GameObject:
   - component: {fileID: 1734743703}
   m_Layer: 0
   m_Name: Box (5)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14886,7 +14834,6 @@ GameObject:
   - component: {fileID: 1750730285}
   - component: {fileID: 1750730284}
   - component: {fileID: 1750730283}
-  - component: {fileID: 1750730282}
   - component: {fileID: 1750730281}
   - component: {fileID: 1750730280}
   - component: {fileID: 1750730279}
@@ -14935,18 +14882,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1750730282
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1750730278}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1750730283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15225,7 +15160,7 @@ GameObject:
   - component: {fileID: 1762655584}
   m_Layer: 0
   m_Name: Box (9)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15419,7 +15354,7 @@ GameObject:
   - component: {fileID: 1777302488}
   m_Layer: 0
   m_Name: Box (20)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15839,7 +15774,7 @@ GameObject:
   - component: {fileID: 1828643730}
   m_Layer: 0
   m_Name: Box (22)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16276,7 +16211,6 @@ GameObject:
   - component: {fileID: 1861725884}
   - component: {fileID: 1861725883}
   - component: {fileID: 1861725882}
-  - component: {fileID: 1861725881}
   - component: {fileID: 1861725880}
   - component: {fileID: 1861725879}
   - component: {fileID: 1861725878}
@@ -16325,18 +16259,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1861725881
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1861725877}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1861725882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16406,7 +16328,7 @@ GameObject:
   - component: {fileID: 1871421618}
   m_Layer: 0
   m_Name: Box (26)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16797,7 +16719,7 @@ GameObject:
   - component: {fileID: 1905648172}
   m_Layer: 0
   m_Name: Box (3)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17023,7 +16945,7 @@ GameObject:
   - component: {fileID: 1922934784}
   m_Layer: 0
   m_Name: Box (14)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18428,7 +18350,7 @@ GameObject:
   - component: {fileID: 2136265607}
   m_Layer: 0
   m_Name: Box (6)
-  m_TagString: Movable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
