@@ -73,6 +73,10 @@ public class PlayerScript : MonoBehaviour {
                 playerRigid.velocity = newVelocity;
             }
         }
+        if(other.gameObject.tag == "PushArea")
+        {
+
+        }
     }
 
     void OnTriggerExit(Collider other)

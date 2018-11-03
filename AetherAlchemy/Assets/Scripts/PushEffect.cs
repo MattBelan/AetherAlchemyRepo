@@ -34,6 +34,11 @@ public class PushEffect : MonoBehaviour {
 
             pushForce.Normalize();
             pushForce = pushForce * pushScalar / magnitude;
+
+            if(other.gameObject.tag == "Player")
+            {
+                other.gameObject.GetComponent<Rigidbody>().AddForce(other.gameObject.transform.up * 10);
+            }
             
             other.gameObject.GetComponent<Rigidbody>().AddForce(pushForce, ForceMode.Impulse);
         }
