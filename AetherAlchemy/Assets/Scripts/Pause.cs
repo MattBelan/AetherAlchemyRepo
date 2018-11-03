@@ -32,6 +32,8 @@ public class Pause : MonoBehaviour
         backgroundMusic.GetComponent<AudioSource>().Pause();
 				pausePanel.SetActive(true);
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         //Disable scripts that still work while timescale is set to 0
     }
@@ -41,7 +43,8 @@ public class Pause : MonoBehaviour
         backgroundMusic.GetComponent<AudioSource>().UnPause();
 				pausePanel.SetActive(false);
 				Time.timeScale = 1;
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         //enable the scripts again
     }
 }
