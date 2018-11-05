@@ -20,7 +20,7 @@ AudioMixerController:
   - guid: e8cfd4679a8bfe3449f1b667cfb40e2b
     name: masterVolume
   - guid: fdb6215eddb07ac4091c931850bfc101
-    name: Musicvol
+    name: musicVolume
   m_AudioMixerGroupViews:
   - guids:
     - 9206853ef9010954096de99ef4669023

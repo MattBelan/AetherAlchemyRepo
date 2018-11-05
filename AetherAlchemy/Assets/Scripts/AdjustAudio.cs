@@ -17,29 +17,22 @@ public class AdjustAudio : MonoBehaviour {
 		float musicValue;
 		bool musicResult = soundMixer.GetFloat("musicVolume", out musicValue);
 		musicVolumeSlider.value = musicValue;
-		Debug.Log(musicVolumeSlider.value);
-		Debug.Log(musicVolumeSlider.value);
-
 	}
 
 	public void GetVolume(){
 		float value;
-				bool result =  soundMixer.GetFloat("fxVolume", out value);
-				Debug.Log(result);
-				Debug.Log(value);
-
-				// if(result){
-				//
-				// 		return value;
-				// }else{
-				// 		return 0f;
-				// }
+		bool result =  soundMixer.GetFloat("fxVolume", out value);
+		// Debug.Log(result);
+		// Debug.Log(value);
 		}
 
-
-
-	// public void ChangeVolume() {
-	// 	musicMixer.SetFloat(musicVolumeSlider.value);
-	// 	fxMixer.SetFloat(fxVolumeSlider.value);
-	// }
+	public void ChangeVolume() {
+		float value;
+		soundMixer.SetFloat("musicVolume", musicVolumeSlider.value);
+		soundMixer.SetFloat("fxVolume", fxVolumeSlider.value);
+		// soundMixer.GetFloat("musicVolume", out value);
+		// Debug.Log("musicVolume =" + value);
+		// soundMixer.GetFloat("musicVolume", out value);
+		// Debug.Log("fxVolume =" + value);
+	}
 }

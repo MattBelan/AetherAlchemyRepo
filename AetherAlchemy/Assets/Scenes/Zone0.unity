@@ -9319,6 +9319,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4530933863493876, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -69.647354
@@ -9356,6 +9361,37 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 578406369}
+    - target: {fileID: 114106656951294140, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: soundMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 121d2a1f58a731141842af53a9257848,
+        type: 2}
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1793587587}
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangeVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360426352519246, guid: a73261bd7c91ae447a455a63a96d6e4d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
   m_IsPrefabAsset: 0
@@ -26094,6 +26130,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793587587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114106656951294140, guid: a73261bd7c91ae447a455a63a96d6e4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 634844298}
+  m_Script: {fileID: 11500000, guid: 015a30e4db528014e86321754f2d563a, type: 3}
 --- !u!1001 &1796010358
 Prefab:
   m_ObjectHideFlags: 0
