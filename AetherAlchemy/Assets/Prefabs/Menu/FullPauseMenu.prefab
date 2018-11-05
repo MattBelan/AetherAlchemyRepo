@@ -1195,6 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224658152834592652}
   - component: {fileID: 114106656951294140}
+  - component: {fileID: 114771070479684638}
   m_Layer: 5
   m_Name: saveOptions
   m_TagString: Untagged
@@ -2415,7 +2416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolumeSlider: {fileID: 114115263015496262}
   fxVolumeSlider: {fileID: 114943642191375562}
-  soundMixer: {fileID: 0}
+  soundMixer: {fileID: 24100000, guid: 121d2a1f58a731141842af53a9257848, type: 2}
 --- !u!114 &114112536088157088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3640,6 +3641,28 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114618836618375528}
         m_MethodName: TurnPages
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114106656951294140}
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114771070479684638}
+        m_MethodName: ChangeBrightness
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5280,6 +5303,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114771070479684638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1633660491346812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd30e6731742d949b5c2870106c3fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brightnessSlider: {fileID: 114089334083495266}
+  newBrightness: 0
 --- !u!114 &114798253013778292
 MonoBehaviour:
   m_ObjectHideFlags: 1
