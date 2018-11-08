@@ -22,6 +22,9 @@ public class AdjustAudio : MonoBehaviour {
 	public void GetVolume(){
 		float value;
 		bool result =  soundMixer.GetFloat("fxVolume", out value);
+		fxVolumeSlider.value = value;
+		result =  soundMixer.GetFloat("musicVolume", out value);
+		musicVolumeSlider.value = value;
 		// Debug.Log(result);
 		// Debug.Log(value);
 		}
