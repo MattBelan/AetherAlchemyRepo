@@ -23,7 +23,9 @@ public class PushScript : MonoBehaviour {
     {
         if(other.gameObject.tag != "Player")
         {
-            Instantiate(pushArea, transform.position, transform.rotation);
+            if(other.gameObject.tag !="Nullifier")
+                Instantiate(pushArea, transform.position, transform.rotation);
+
             ps.potList.Remove(gameObject);
             Destroy(gameObject);
         }

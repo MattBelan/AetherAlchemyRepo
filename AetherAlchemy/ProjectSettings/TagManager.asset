@@ -8,6 +8,7 @@ TagManager:
   - Movable
   - RoomObject
   - PushArea
+  - Nullifier
   layers:
   - Default
   - TransparentFX
