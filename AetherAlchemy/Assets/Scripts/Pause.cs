@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject quitWarning;
     [SerializeField] private GameObject backgroundMusic;
+    private Button potionPage;
     static bool isPaused = false;
 
     void Update()
@@ -46,5 +48,14 @@ public class Pause : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         //enable the scripts again
+    }
+    public void GemGet()
+    {
+      PauseGame();
+      potionPage = GameObject.Find("Button_Potions").GetComponent<Button>();
+      potionPage.onClick.Invoke();
+      potionPage = GameObject.Find("to-bounce").GetComponent<Button>();
+      potionPage.onClick.Invoke();
+
     }
 }
