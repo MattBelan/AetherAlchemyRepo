@@ -21,12 +21,15 @@ public class PlayerScript : MonoBehaviour {
     Rigidbody playerRigid;
     bool onBounce;
 
+    bool hasGem;
+
     // Use this for initialization
     void Start () {
         potReady = "";
         inputs = new List<string>();
         playerRigid = GetComponent<Rigidbody>();
         onBounce = false;
+        hasGem = true;
 	}
 	
 	// Update is called once per frame
@@ -46,7 +49,7 @@ public class PlayerScript : MonoBehaviour {
 
     void ThrowBounce()
     {
-        if (potList.Count < 1)
+        if (potList.Count < 1 && hasGem)
         {
             potList.Add(Instantiate(bouncePotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
         }
@@ -54,7 +57,7 @@ public class PlayerScript : MonoBehaviour {
 
     void ThrowPush()
     {
-        if (potList.Count < 1)
+        if (potList.Count < 1 && hasGem)
         {
             potList.Add(Instantiate(pushPotion, transform.position + transform.right.normalized / 4 + transform.up / 2, transform.rotation));
         }
@@ -209,6 +212,8 @@ public class PlayerScript : MonoBehaviour {
         {
             playerRigid.AddForce(0, 30.0f, 0, ForceMode.Impulse);
         }
+
+        AirMovement();
     }
 
     void LimitEffects()
@@ -219,5 +224,33 @@ public class PlayerScript : MonoBehaviour {
             effectList.Remove(effectList[0]);
             Destroy(effect);
         }
+    }
+
+    void AirMovement()
+    {
+        if (playerRigid.velocity.y != 0)
+        {
+            if (Input.GetKeyDown("a"))
+            {
+                playerRigid.velocity -= transform.right*4;
+            }
+            if (Input.GetKeyDown("d"))
+            {
+                playerRigid.velocity += transform.right*4;
+            }
+            if (Input.GetKeyDown("w"))
+            {
+                playerRigid.velocity += transform.forward*4;
+            }
+            if (Input.GetKeyDown("s"))
+            {
+                playerRigid.velocity -= transform.forward*4;
+            }
+        }
+    }
+
+    public void PickUpGem()
+    {
+        hasGem = !hasGem;
     }
 }
