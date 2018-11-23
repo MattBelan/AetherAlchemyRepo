@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33513587501128870}
   - component: {fileID: 23444678653559228}
   - component: {fileID: 65169452502759420}
+  - component: {fileID: 114000075202912762}
   m_Layer: 0
   m_Name: bounceTest
   m_TagString: bounceArea
@@ -96,3 +97,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 11.235594, z: 1.0000002}
   m_Center: {x: 0.00000005300311, y: 4.6177955, z: -0.00000010600622}
+--- !u!114 &114000075202912762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1476402422766944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d544bf8484a743f4a92348d9c2fdf78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
