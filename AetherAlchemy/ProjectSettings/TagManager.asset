@@ -9,6 +9,7 @@ TagManager:
   - RoomObject
   - PushArea
   - Nullifier
+  - Rotating
   layers:
   - Default
   - TransparentFX

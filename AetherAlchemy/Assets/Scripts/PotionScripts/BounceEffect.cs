@@ -16,13 +16,15 @@ public class BounceEffect : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.tag == "Movable")
-		{
+		if (other.gameObject.tag == "Movable"||other.gameObject.tag == "Rotating") {
 			Rigidbody otherRigid = other.attachedRigidbody;
-			if (otherRigid.velocity.y < -3)
-			{
+			if (otherRigid.velocity.y < -3) {
 				Vector3 newVelocity = otherRigid.velocity;
 				newVelocity.y = -newVelocity.y;
+				if(other.gameObject.tag == "Rotating"){
+					newVelocity.x = -newVelocity.x;
+					newVelocity.z = -newVelocity.z;
+				}
 
 				otherRigid.velocity = newVelocity;
 			}
