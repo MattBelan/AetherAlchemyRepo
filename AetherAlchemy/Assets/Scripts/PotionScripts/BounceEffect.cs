@@ -6,7 +6,7 @@ public class BounceEffect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        transform.rotation = new Quaternion(0, 0, 0, 0);
 	}
 	
 	// Update is called once per frame
