@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject quitWarning;
     [SerializeField] private GameObject backgroundMusic;
+    [SerializeField] private GameObject gemGetNote;
     private Button potionPage;
     static bool isPaused = false;
 
@@ -23,6 +24,21 @@ public class Pause : MonoBehaviour
             {
                 if(quitWarning.activeInHierarchy){
                   quitWarning.SetActive(false);
+                }
+                if(gemGetNote.activeInHierarchy){
+                  gemGetNote.SetActive(false);
+                }
+                if(GameObject.Find("/FullPauseMenu/fire-potion-page")){
+                  GameObject.Find("/FullPauseMenu/fire-potion-page").SetActive(false);
+                }
+                if(GameObject.Find("/FullPauseMenu/bounce-potion-page")){
+                  GameObject.Find("/FullPauseMenu/bounce-potion-page").SetActive(false);
+                }
+                if(GameObject.Find("/FullPauseMenu/push-potion-page")){
+                  GameObject.Find("/FullPauseMenu/push-potion-page").SetActive(false);
+                }
+                if(GameObject.Find("/FullPauseMenu/about-page")){
+                  GameObject.Find("/FullPauseMenu/about-page").SetActive(false);
                 }
                 ContinueGame();
             }
@@ -52,10 +68,12 @@ public class Pause : MonoBehaviour
     public void GemGet()
     {
       PauseGame();
-      potionPage = GameObject.Find("Button_Potions").GetComponent<Button>();
-      potionPage.onClick.Invoke();
-      potionPage = GameObject.Find("to-bounce").GetComponent<Button>();
-      potionPage.onClick.Invoke();
+      pausePanel.SetActive(false);
+      gemGetNote.SetActive(true);
+      // potionPage = GameObject.Find("Button_Potions").GetComponent<Button>();
+      // potionPage.onClick.Invoke();
+      // potionPage = GameObject.Find("to-bounce").GetComponent<Button>();
+      // potionPage.onClick.Invoke();
 
     }
 }
