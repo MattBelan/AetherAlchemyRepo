@@ -22,24 +22,7 @@ public class Pause : MonoBehaviour
             }
             else if (isPaused)
             {
-                if(quitWarning.activeInHierarchy){
-                  quitWarning.SetActive(false);
-                }
-                if(gemGetNote.activeInHierarchy){
-                  gemGetNote.SetActive(false);
-                }
-                if(GameObject.Find("/FullPauseMenu/fire-potion-page")){
-                  GameObject.Find("/FullPauseMenu/fire-potion-page").SetActive(false);
-                }
-                if(GameObject.Find("/FullPauseMenu/bounce-potion-page")){
-                  GameObject.Find("/FullPauseMenu/bounce-potion-page").SetActive(false);
-                }
-                if(GameObject.Find("/FullPauseMenu/push-potion-page")){
-                  GameObject.Find("/FullPauseMenu/push-potion-page").SetActive(false);
-                }
-                if(GameObject.Find("/FullPauseMenu/about-page")){
-                  GameObject.Find("/FullPauseMenu/about-page").SetActive(false);
-                }
+
                 ContinueGame();
             }
         }
@@ -57,6 +40,25 @@ public class Pause : MonoBehaviour
     }
     public void ContinueGame()
     {
+      //escape all menus
+      if(quitWarning.activeInHierarchy){
+        quitWarning.SetActive(false);
+      }
+      if(gemGetNote.activeInHierarchy){
+        gemGetNote.SetActive(false);
+      }
+      if(GameObject.Find("/FullPauseMenu/fire-potion-page")){
+        GameObject.Find("/FullPauseMenu/fire-potion-page").SetActive(false);
+      }
+      if(GameObject.Find("/FullPauseMenu/bounce-potion-page")){
+        GameObject.Find("/FullPauseMenu/bounce-potion-page").SetActive(false);
+      }
+      if(GameObject.Find("/FullPauseMenu/push-potion-page")){
+        GameObject.Find("/FullPauseMenu/push-potion-page").SetActive(false);
+      }
+      if(GameObject.Find("/FullPauseMenu/about-page")){
+        GameObject.Find("/FullPauseMenu/about-page").SetActive(false);
+      }
         isPaused = false;
         backgroundMusic.GetComponent<AudioSource>().UnPause();
 				pausePanel.SetActive(false);
