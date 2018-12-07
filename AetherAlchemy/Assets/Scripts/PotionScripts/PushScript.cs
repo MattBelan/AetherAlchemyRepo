@@ -30,6 +30,7 @@ public class PushScript : MonoBehaviour {
             if(other.gameObject.tag !="Nullifier")
                 Instantiate(pushArea, transform.position, transform.rotation);
 
+            GameObject.Find("ShatterSound").GetComponent<AudioSource>().Play();
             ps.potList.Remove(gameObject);
             Destroy(gameObject);
         }

@@ -30,11 +30,13 @@ public class BounceScript : MonoBehaviour {
         if (other.gameObject.tag == "RoomObject")
         {
             ps.effectList.Add(Instantiate(bounceEffect, transform.position, other.gameObject.transform.rotation));
+            GameObject.Find("ShatterSound").GetComponent<AudioSource>().Play();
             ps.potList.Remove(gameObject);
             Destroy(gameObject);
         }
         else if(other.gameObject.tag != "Player")
         {
+            GameObject.Find("ShatterSound").GetComponent<AudioSource>().Play();
             ps.potList.Remove(gameObject);
             Destroy(gameObject);
         }
