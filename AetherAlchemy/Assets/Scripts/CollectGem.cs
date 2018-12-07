@@ -20,7 +20,7 @@ public class CollectGem : MonoBehaviour {
 		if(touch.gameObject == player) {
 			pauseScript.GemGet();
 			gem.SetActive(false);
-			//player.hasGreenGem(true);
+            player.GetComponent<PlayerScript>().PickUpGem();
 		}
 	}
 }

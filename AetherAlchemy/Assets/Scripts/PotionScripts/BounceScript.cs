@@ -21,11 +21,20 @@ public class BounceScript : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Spawns a bounce area upon colliding with specified objects
+    /// </summary>
+    /// <param name="other"></param>
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "RoomObject")
         {
-            ps.effectList.Add(Instantiate(bounceEffect, transform.position + transform.up / 10, transform.rotation));
+            ps.effectList.Add(Instantiate(bounceEffect, transform.position, other.gameObject.transform.rotation));
+            ps.potList.Remove(gameObject);
+            Destroy(gameObject);
+        }
+        else if(other.gameObject.tag != "Player")
+        {
             ps.potList.Remove(gameObject);
             Destroy(gameObject);
         }

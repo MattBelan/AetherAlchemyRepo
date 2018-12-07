@@ -19,6 +19,10 @@ public class PushScript : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// Creates an area that pushes objects away
+    /// </summary>
+    /// <param name="other"></param>
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag != "Player")

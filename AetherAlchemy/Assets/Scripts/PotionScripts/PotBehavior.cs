@@ -47,6 +47,9 @@ public class PotBehavior : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// Applys gravity to the potion
+    /// </summary>
 	void ApplyGravity(){
 		acceleration += gravity;
 	

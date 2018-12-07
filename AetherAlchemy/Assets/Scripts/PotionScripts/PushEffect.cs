@@ -24,6 +24,10 @@ public class PushEffect : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Forces certain objects away from the center of the area
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Movable" || other.gameObject.tag == "Player")

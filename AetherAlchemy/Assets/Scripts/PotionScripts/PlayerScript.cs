@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour {
         inputs = new List<string>();
         playerRigid = GetComponent<Rigidbody>();
         onBounce = false;
-        hasGem = true;
+        hasGem = false;
 	}
 	
 	// Update is called once per frame
@@ -40,6 +40,9 @@ public class PlayerScript : MonoBehaviour {
         LimitEffects();
     }
 
+    /// <summary>
+    /// Instantiates a fire potion
+    /// </summary>
 	void ThrowFire(){
         if (potList.Count <1)
         {
@@ -47,6 +50,9 @@ public class PlayerScript : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// Instantiates a bounce potion
+    /// </summary>
     void ThrowBounce()
     {
         if (potList.Count < 1 && hasGem)
@@ -55,6 +61,9 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Instantiates a push potion
+    /// </summary>
     void ThrowPush()
     {
         if (potList.Count < 1 && hasGem)
@@ -63,6 +72,10 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Accomodating the bounce potion's effect
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "bounceArea")
@@ -82,6 +95,10 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Function to toggle whether the player is on a bounce effect
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "bounceArea")
@@ -90,6 +107,9 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// A function to consolidate and clean up all inputs
+    /// </summary>
     void ProcessInput()
     {
         //getting potion inputs
@@ -216,6 +236,9 @@ public class PlayerScript : MonoBehaviour {
         AirMovement();
     }
 
+    /// <summary>
+    /// Limits the number of active potion effects in game
+    /// </summary>
     void LimitEffects()
     {
         if (effectList.Count > 2)
@@ -226,6 +249,9 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// A function to handle movement in the air
+    /// </summary>
     void AirMovement()
     {
         if (playerRigid.velocity.y != 0)
@@ -249,8 +275,11 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Toggles if the gem has been picked up
+    /// </summary>
     public void PickUpGem()
     {
-        hasGem = !hasGem;
+        hasGem = true;
     }
 }

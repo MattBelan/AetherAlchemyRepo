@@ -5,46 +5,23 @@ using UnityEngine;
 public class NullBlock : MonoBehaviour {
 
     GameObject burnablePotion;
-    Collider nullCollider;
-    Collider potCollider;
 
     // Use this for initialization
     void Start()
     {
-        nullCollider = GetComponentInChildren<Collider>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        nullCollider = gameObject.GetComponentInChildren<Collider>();
         burnablePotion = GameObject.Find("PotionTest(Clone)");
-        if (burnablePotion != null)
-        {
-            potCollider = burnablePotion.GetComponent<Collider>();
-        }
-        /*
-        if (CheckIntersection())
-        {
-            GameObject.Find("RigidBodyFPSController").GetComponent<PlayerScript>().potList.Remove(burnablePotion);
-            Destroy(burnablePotion);
-        }
-        */
     }
 
-    bool CheckIntersection()
-    {
-        if (burnablePotion == null)
-        {
-            return false;
-        }
-        if (nullCollider.bounds.Intersects(potCollider.bounds))
-        {
-            return true;
-        }
-        return false;
-    }
-
+    /// <summary>
+    /// On Collision with Fire potion, destroy fire potion
+    /// </summary>
+    /// <param name="pot"></param>
     void OnCollisionEnter(Collision pot)
     {
         if(burnablePotion == pot.gameObject)

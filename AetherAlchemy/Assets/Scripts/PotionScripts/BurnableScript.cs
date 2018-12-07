@@ -29,6 +29,10 @@ public class BurnableScript : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// On collision, burn away burnable objects
+    /// </summary>
+    /// <param name="pot"></param>
     void OnCollisionEnter(Collision pot)
     {
         if(burnablePotion == pot.gameObject)
