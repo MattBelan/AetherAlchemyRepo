@@ -21561,15 +21561,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1255537926319402, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1819835016621866, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1819544435586692, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73261bd7c91ae447a455a63a96d6e4d, type: 2}
