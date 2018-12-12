@@ -28,6 +28,6 @@ public class ExitGame : MonoBehaviour {
 
 	void QuitGame(){
 		Application.Quit();
-		EditorApplication.isPlaying = false;
+		//EditorApplication.isPlaying = false;
 	}
 }

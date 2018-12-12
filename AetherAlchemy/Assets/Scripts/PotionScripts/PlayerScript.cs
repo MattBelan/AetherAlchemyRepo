@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour {
     public Vector3 pos;
     public Vector3 direction;
     public Vector3 velocity;
+    public Vector3 prevVelocity;
     Rigidbody playerRigid;
     bool onBounce;
 
@@ -35,6 +36,8 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         pos = transform.position;
+        prevVelocity = velocity;
+        velocity = playerRigid.velocity;
 
         ProcessInput();
         LimitEffects();
@@ -84,6 +87,13 @@ public class PlayerScript : MonoBehaviour {
             if (playerRigid.velocity.y < -3)
             {
                 Vector3 newVelocity = playerRigid.velocity;
+                newVelocity.y = -newVelocity.y;
+
+                playerRigid.velocity = newVelocity;
+            }
+            else if (prevVelocity.y < 0)
+            {
+                Vector3 newVelocity = prevVelocity;
                 newVelocity.y = -newVelocity.y;
 
                 playerRigid.velocity = newVelocity;

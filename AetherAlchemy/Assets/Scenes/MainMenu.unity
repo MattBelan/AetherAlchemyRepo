@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f5cb8d04bff6d49bb9b3c65568d400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Zone0
+  sceneName: Zone1
 --- !u!4 &135502014
 Transform:
   m_ObjectHideFlags: 0
